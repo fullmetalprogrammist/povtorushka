@@ -9,9 +9,10 @@
     <script src="./scripts/menu-creator.js" defer></script>
     <script src="./scripts/menu-mobile.js" defer></script>
     <script src="./scripts/highlight-vocabular-select.js" defer></script>
+    <script src="./scripts/copy-line-text.js" defer></script>
 </head>
 <body>
-    <h1>Dumb and Dumber</h1>
+    <h1 id="pagestart">Dumb and Dumber</h1>
     <nav class="table-of-contents">
       <ul class="toc-list">
       </ul>
@@ -1292,15 +1293,54 @@
     <section id="vocabulary">
         <h2>Vocabulary</h2>
             <article class="vocab-card">
-                <div class="original-text">Excuse me. Could you tell me how to get to the medical school?</div>
+                <div class="original-text">rascal</div>
                 <div class="links">
-                    <a href="#p1" class="vocab-link" data-target="1">1</a>
-                    <a href="#p2" class="vocab-link" data-target="2">2</a>
-                    <a href="#p3" class="vocab-link" data-target="3">3</a>
+                    <a href="#p13" class="vocab-link" data-target="1">1</a>
                 </div>
                 <div class="divider"></div>
                 <div class="translations">
-                    <p>Извините. Не подскажете, как добраться до медицинской школы?</p>
+                    <p>"Плут, хитрец" - обычно без негатива, шутливо.</p>
+                </div>
+            </article>
+            <article class="vocab-card">
+                <div class="original-text">on an empty stomach</div>
+                <div class="links">
+                    <a href="#p15" class="vocab-link" data-target="1">1</a>
+                </div>
+                <div class="divider"></div>
+                <div class="translations">
+                    <p>"Натощак" \ "На пустой желудок" - устойчивое выражение.</p>
+                </div>
+            </article>
+            <article class="vocab-card">
+                <div class="original-text">Get a move on it!</div>
+                <div class="links">
+                    <a href="#p16" class="vocab-link" data-target="1">1</a>
+                </div>
+                <div class="divider"></div>
+                <div class="translations">
+                    <p>"Давай быстрей" \ "Пошевеливайся" - it здесь добавлено, потому что имеется ввиду конретно, куда надо быстрей пошевеливаться - на шоу.</p>
+                    <p>Когда нет конкретного указания, а просто "Давай быстрей!", то это просто "Get a move on"</p>
+                </div>
+            </article>
+            <article class="vocab-card">
+                <div class="original-text">Suck me sideways</div>
+                <div class="links">
+                    <a href="#p18" class="vocab-link" data-target="1">1</a>
+                </div>
+                <div class="divider"></div>
+                <div class="translations">
+                    <p>"Охереть!" \ "Ни хера себе!" - грубое выражение удивления.</p>
+                </div>
+            </article>
+            <article class="vocab-card">
+                <div class="original-text">So where're you headed?</div>
+                <div class="links">
+                    <a href="#p13" class="vocab-link" data-target="1">1</a>
+                </div>
+                <div class="divider"></div>
+                <div class="translations">
+                    <p></p>
                 </div>
             </article>
     </section>
@@ -1308,7 +1348,10 @@
         <a href="../index.html" class="panel-button home" aria-label="На главную">
             <span class="material-icons">home</span>
         </a>
-        <a href="#vocabulary" class="panel-button home" aria-label="Словарь">
+        <a href="#pagestart" class="panel-button pagestart" aria-label="Словарь">
+            <span class="material-icons">arrow_upward</span>
+        </a>
+        <a href="#vocabulary" class="panel-button vocabulary" aria-label="Словарь">
             <span class="material-icons">menu_book</span>
         </a>
         <button class="panel-button chapters-menu" aria-label="Меню">
