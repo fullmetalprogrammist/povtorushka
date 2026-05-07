@@ -7,6 +7,7 @@ document.querySelectorAll('p.line').forEach(p => {
     img.className = 'character-portrait';
     img.loading = 'lazy';
     img.setAttribute('data-character', character);
+    img.onerror = () => { img.src = './img/chars/missingportrait.webp'; };
     img.addEventListener('click', (e) => {
         e.stopPropagation();
         const char = img.getAttribute('data-character');
