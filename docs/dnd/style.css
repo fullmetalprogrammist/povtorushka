@@ -81,9 +81,9 @@ h2 {
     margin-bottom: 0;
 }
 
-/* .line::before {
+.line::before {
     content: "— ";
-} */
+}
 
 
 
@@ -321,61 +321,3 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-
-
-
-
-
-/* ======================================================================= */
-/* ======================================================================= */
-/* ======================================================================= */
-/*                            Портрет персонажа                            */
-/* ======================================================================= */
-/* ======================================================================= */
-/* ======================================================================= */
-.line-wrapper {
-    display: flex;
-    align-items: stretch;
-    gap: 20px;
-    margin-bottom: 10px;
-}
-
-.portrait-slot {
-    flex-shrink: 0;
-    display: flex;
-    align-items: flex-start;
-}
-
-.character-portrait {
-    width: 50px;
-    height: auto;
-    flex-shrink: 0;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.line {
-    display: flex;
-    align-items: center;
-}
-
-/* .bubble {
-  position: relative;
-  padding: 8px 12px;
-  border-radius: 14px;
-  line-height: 1.45;
-  word-break: break-word;
-  display: inline-block;
-  max-width: 80%;
-}
-
-.bubble::before {
-  content: "";
-  position: absolute;
-  left: -3px;
-  top: 8px;
-  width: 12px;
-  height: 12px;
-  background: inherit;
-  transform: rotate(45deg);
-} */
