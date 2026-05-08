@@ -108,8 +108,13 @@ h2 {
     padding: 16px;
     max-height: calc(100vh - 40px);
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
     z-index: 100;
+}
+.table-of-contents::-webkit-scrollbar {
+    display: none;
 }
 
 .table-of-contents h3 {
