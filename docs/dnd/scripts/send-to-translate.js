@@ -1,24 +1,27 @@
 document.querySelectorAll('p.line').forEach(el => {
+    // Для десктопа: удержание 1 секунда
     let timer;
-    let touchStarted = false;
     const start = (e) => {
-        touchStarted = true;
         timer = setTimeout(() => {
-            if (touchStarted) {
-                if (e.cancelable) e.preventDefault();
-                const text = encodeURIComponent(el.textContent);
-                window.open(`https://translate.google.com/?sl=en&tl=ru&text=${text}&op=translate`);
-            }
+            const text = encodeURIComponent(el.textContent);
+            window.open(`https://translate.google.com/?sl=en&tl=ru&text=${text}&op=translate`);
         }, 1000);
     };
-    const cancel = () => {
-        touchStarted = false;
-        clearTimeout(timer);
-    };
+    const cancel = () => clearTimeout(timer);
     el.addEventListener('mousedown', start);
     el.addEventListener('mouseup', cancel);
     el.addEventListener('mouseleave', cancel);
-    el.addEventListener('touchstart', start, {passive: true});
-    el.addEventListener('touchend', cancel);
-    el.addEventListener('touchcancel', cancel);
+    
+    // Для мобилы: свайп вправо
+    let touchStartX = 0;
+    el.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+    });
+    el.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].clientX;
+        if (touchEndX - touchStartX > 50) {
+            const text = encodeURIComponent(el.textContent);
+            window.open(`https://translate.google.com/?sl=en&tl=ru&text=${text}&op=translate`);
+        }
+    });
 });
