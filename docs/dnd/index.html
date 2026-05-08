@@ -12,6 +12,7 @@
     <script src="./scripts/copy-line-text.js" defer></script>
     <script src="./scripts/send-to-translate.js" defer></script>
     <script src="./scripts/add-portraits.js" defer></script>
+    <script src="./scripts/highlight-lines-by-chars.js" defer></script>
 </head>
 <body>
     <h1 id="pagestart">Dumb and Dumber</h1>
@@ -22,7 +23,7 @@
     <section class="scene">
         <img src="img/0010.webp" class="scene-image"/>
         <h2>How to get to the medical school?</h2>
-        <p id="p1" data-character="lloyd" class="line">Excuse me. Could you tell me how to get to the medical school? I'm supposed to be doing a lecture in about 20 minutes, and my driver's a bit lost. Excuse me. Could you tell me how to get to the medical school? I'm supposed to be doing a lecture in about 20 minutes, and my driver's a bit lost. Excuse me. Could you tell me how to get to the medical school? I'm supposed to be doing a lecture in about 20 minutes, and my driver's a bit lost.</p>
+        <p id="p1" data-character="lloyd" class="line">Excuse me. Could you tell me how to get to the medical school?</p>
         <p id="p2" data-character="" class="line">You go straight ahead, and you make a left over the bridge.</p>
         <p id="p3" data-character="lloyd" class="line">That's a lovely accent you have. New Jersey?</p>
         <p id="p4" data-character="" class="line">Austria.</p>
@@ -187,69 +188,69 @@
     <section class="scene">
         <img src="img/1078.webp" class="scene-image"/>
         <h2>I've had it with this dump!</h2>
-        <p id="p130" data-character="" class="line">Where's the booze?</p>
-        <p id="p131" data-character="" class="line">I got robbed by a sweet old lady on a motorized cart.</p>
-        <p id="p132" data-character="" class="line">I didn't even see it coming.</p>
-        <p id="p133" data-character="" class="line">No...</p>
-        <p id="p134" data-character="" class="line">Harry. Come on, Harry. Cheer up.</p>
-        <p id="p135" data-character="" class="line">It gets worse, Lloyd. My parakeet Petey... He's dead.</p>
-        <p id="p136" data-character="" class="line">Oh, man. I'm sorry, Harry. What happened?</p>
-        <p id="p137" data-character="" class="line">His head fell off.</p>
-        <p id="p138" data-character="" class="line">His head fell off?</p>
-        <p id="p139" data-character="" class="line">Yeah, he was pretty old.</p>
-        <p id="p140" data-character="" class="line">That's it. I've had it with this dump!</p>
-        <p id="p141" data-character="" class="line">We got no food. We got no jobs.</p>
-        <p id="p142" data-character="" class="line">Our pets' heads are falling off!</p>
-        <p id="p143" data-character="" class="line">Okay, just calm down!</p>
-        <p id="p144" data-character="" class="line">What the hell are we doing here, Harry?</p>
-        <p id="p145" data-character="" class="line">We gotta get out of this town!</p>
-        <p id="p146" data-character="" class="line">Yeah? And go where? Where are we gonna go?</p>
-        <p id="p147" data-character="" class="line">I'll tell you where, someplace warm...</p>
-        <p id="p148" data-character="" class="line">A place where the beer flows like wine, where beautiful women instinctively flock like the salmon of Capistrano.</p>
-        <p id="p149" data-character="" class="line">I'm talking about a little place called... Aspen.</p>
-        <p id="p150" data-character="" class="line">I don't know, Lloyd. The French are assholes.</p>
-        <p id="p151" data-character="" class="line">Wait a minute! I know what you're up to, mister.</p>
-        <p id="p152" data-character="" class="line">Yeah! You just wanna go to Aspen and find that girl who lost her briefcase, and you need me to drive you there!</p>
-        <p id="p153" data-character="" class="line">Right? Am I right? Am I right?</p>
-        <p id="p154" data-character="" class="line">Yeah! So? So I wanna go someplace where we know somebody who can plug us into the social pipeline.</p>
-        <p id="p155" data-character="" class="line">No, Lloyd! No! I say we stay here, we hunt for jobs, and we keep saving our money for the worm store!</p>
-        <p id="p156" data-character="" class="line">I don't know about you, but I am getting sick and tired of running from creditors!</p>
-        <p id="p157" data-character="" class="line">You know what I'm sick and tired of, Harry?</p>
-        <p id="p158" data-character="" class="line">I'm sick and tired of having to eke my way through life.</p>
-        <p id="p159" data-character="" class="line">I'm sick and tired of being a nobody.</p>
-        <p id="p160" data-character="" class="line">But most of all... I'm sick and tired of having nobody.</p>
-        <p id="p161" data-character="" class="line">Okay, Lloyd. Aspen it is.</p>
-        <p id="p162" data-character="" class="line">You'd better not be foolin'.</p>
-        <p id="p163" data-character="" class="line">Okay okay, just let it out.</p>
-        <p id="p164" data-character="" class="line">Have a good cry.</p>
-        <p id="p165" data-character="" class="line">Come on. Okay. Okay, that's enough.</p>
+        <p id="p130" data-character="harry" class="line">Where's the booze?</p>
+        <p id="p131" data-character="lloyd" class="line">I got robbed by a sweet old lady on a motorized cart.</p>
+        <p id="p132" data-character="lloyd" class="line">I didn't even see it coming.</p>
+        <p id="p133" data-character="harry" class="line">No...</p>
+        <p id="p134" data-character="lloyd" class="line">Harry. Come on, Harry. Cheer up.</p>
+        <p id="p135" data-character="harry" class="line">It gets worse, Lloyd. My parakeet Petey... He's dead.</p>
+        <p id="p136" data-character="lloyd" class="line">Oh, man. I'm sorry, Harry. What happened?</p>
+        <p id="p137" data-character="harry" class="line">His head fell off.</p>
+        <p id="p138" data-character="lloyd" class="line">His head fell off?</p>
+        <p id="p139" data-character="harry" class="line">Yeah, he was pretty old.</p>
+        <p id="p140" data-character="lloyd" class="line">That's it. I've had it with this dump!</p>
+        <p id="p141" data-character="lloyd" class="line">We got no food. We got no jobs.</p>
+        <p id="p142" data-character="lloyd" class="line">Our pets' heads are falling off!</p>
+        <p id="p143" data-character="harry" class="line">Okay, just calm down!</p>
+        <p id="p144" data-character="lloyd" class="line">What the hell are we doing here, Harry?</p>
+        <p id="p145" data-character="lloyd" class="line">We gotta get out of this town!</p>
+        <p id="p146" data-character="harry" class="line">Yeah? And go where? Where are we gonna go?</p>
+        <p id="p147" data-character="lloyd" class="line">I'll tell you where, someplace warm...</p>
+        <p id="p148" data-character="lloyd" class="line">A place where the beer flows like wine, where beautiful women instinctively flock like the salmon of Capistrano.</p>
+        <p id="p149" data-character="lloyd" class="line">I'm talking about a little place called... Aspen.</p>
+        <p id="p150" data-character="harry" class="line">I don't know, Lloyd. The French are assholes.</p>
+        <p id="p151" data-character="harry" class="line">Wait a minute! I know what you're up to, mister.</p>
+        <p id="p152" data-character="harry" class="line">Yeah! You just wanna go to Aspen and find that girl who lost her briefcase, and you need me to drive you there!</p>
+        <p id="p153" data-character="harry" class="line">Right? Am I right? Am I right?</p>
+        <p id="p154" data-character="lloyd" class="line">Yeah! So? So I wanna go someplace where we know somebody who can plug us into the social pipeline.</p>
+        <p id="p155" data-character="harry" class="line">No, Lloyd! No! I say we stay here, we hunt for jobs, and we keep saving our money for the worm store!</p>
+        <p id="p156" data-character="harry" class="line">I don't know about you, but I am getting sick and tired of running from creditors!</p>
+        <p id="p157" data-character="lloyd" class="line">You know what I'm sick and tired of, Harry?</p>
+        <p id="p158" data-character="lloyd" class="line">I'm sick and tired of having to eke my way through life.</p>
+        <p id="p159" data-character="lloyd" class="line">I'm sick and tired of being a nobody.</p>
+        <p id="p160" data-character="lloyd" class="line">But most of all... I'm sick and tired of having nobody.</p>
+        <p id="p161" data-character="harry" class="line">Okay, Lloyd. Aspen it is.</p>
+        <p id="p162" data-character="lloyd" class="line">You'd better not be foolin'.</p>
+        <p id="p163" data-character="harry" class="line">Okay okay, just let it out.</p>
+        <p id="p164" data-character="harry" class="line">Have a good cry.</p>
+        <p id="p165" data-character="harry" class="line">Come on. Okay. Okay, that's enough.</p>
     </section>
     <section class="scene">
         <img src="img/1271.webp" class="scene-image"/>
         <h2>I sold some stuff to Billy in 4C</h2>
-        <p id="p166" data-character="" class="line">Lloyd, what are you doing?</p>
-        <p id="p167" data-character="" class="line">It feels like you're running at an incredible rate, Harry.</p>
-        <p id="p168" data-character="" class="line">Would you quit it?</p>
-        <p id="p169" data-character="" class="line">We're not even through Connecticut yet, and already you're annoying me.</p>
-        <p id="p170" data-character="" class="line">We're really doing it, aren't we?</p>
-        <p id="p171" data-character="" class="line">Yeah.</p>
-        <p id="p172" data-character="" class="line">Hey, where'd you get those?</p>
-        <p id="p173" data-character="" class="line">I bought them when we filled up.</p>
-        <p id="p174" data-character="" class="line">Well we're supposed to talk about all expenditures, Lloyd.</p>
-        <p id="p175" data-character="" class="line">We're on a very tight budget.</p>
-        <p id="p176" data-character="" class="line">This didn't come out of our travel fund.</p>
-        <p id="p177" data-character="" class="line">I was able to raise 25 extra bucks before we left.</p>
-        <p id="p178" data-character="" class="line">Where did you get 25 extra bucks?</p>
-        <p id="p179" data-character="" class="line">I sold some stuff to Billy in 4C.</p>
-        <p id="p180" data-character="" class="line">The blind kid?</p>
-        <p id="p181" data-character="" class="line">Yeah!</p>
-        <p id="p182" data-character="" class="line">What did you sell him, Lloyd?</p>
-        <p id="p183" data-character="" class="line">Stuff.</p>
-        <p id="p184" data-character="" class="line">What kind of stuff?</p>
-        <p id="p185" data-character="" class="line">I don't know. A few baseball cards, a sack of marbles... Petey.</p>
-        <p id="p186" data-character="" class="line">Petey? You sold my dead bird to a blind kid?</p>
-        <p id="p187" data-character="" class="line">Lloyd, that... That... What are you... Petey didn't even have a head!</p>
-        <p id="p188" data-character="" class="line">Harry, I took care of it.</p>
+        <p id="p166" data-character="harry" class="line">Lloyd, what are you doing?</p>
+        <p id="p167" data-character="lloyd" class="line">It feels like you're running at an incredible rate, Harry.</p>
+        <p id="p168" data-character="harry" class="line">Would you quit it?</p>
+        <p id="p169" data-character="harry" class="line">We're not even through Connecticut yet, and already you're annoying me.</p>
+        <p id="p170" data-character="lloyd" class="line">We're really doing it, aren't we?</p>
+        <p id="p171" data-character="harry" class="line">Yeah.</p>
+        <p id="p172" data-character="harry" class="line">Hey, where'd you get those?</p>
+        <p id="p173" data-character="lloyd" class="line">I bought them when we filled up.</p>
+        <p id="p174" data-character="harry" class="line">Well we're supposed to talk about all expenditures, Lloyd.</p>
+        <p id="p175" data-character="harry" class="line">We're on a very tight budget.</p>
+        <p id="p176" data-character="lloyd" class="line">This didn't come out of our travel fund.</p>
+        <p id="p177" data-character="lloyd" class="line">I was able to raise 25 extra bucks before we left.</p>
+        <p id="p178" data-character="harry" class="line">Where did you get 25 extra bucks?</p>
+        <p id="p179" data-character="lloyd" class="line">I sold some stuff to Billy in 4C.</p>
+        <p id="p180" data-character="harry" class="line">The blind kid?</p>
+        <p id="p181" data-character="lloyd" class="line">Yeah!</p>
+        <p id="p182" data-character="harry" class="line">What did you sell him, Lloyd?</p>
+        <p id="p183" data-character="lloyd" class="line">Stuff.</p>
+        <p id="p184" data-character="harry" class="line">What kind of stuff?</p>
+        <p id="p185" data-character="lloyd" class="line">I don't know. A few baseball cards, a sack of marbles... Petey.</p>
+        <p id="p186" data-character="harry" class="line">Petey? You sold my dead bird to a blind kid?</p>
+        <p id="p187" data-character="harry" class="line">Lloyd, that... That... What are you... Petey didn't even have a head!</p>
+        <p id="p188" data-character="lloyd" class="line">Harry, I took care of it.</p>
     </section>
     <section class="scene">
         <img src="img/1286.webp" class="scene-image"/>
@@ -257,161 +258,161 @@
         <p id="p189" data-character="" class="line">Pretty bird. Yeah. Can you say, "pretty bird"?</p>
         <p id="p190" data-character="" class="line">Pretty bird. Yes, pretty bird. Pretty bird.</p>
         <p id="p191" data-character="" class="line">Polly want a cracker?</p>
-        <p id="p192" data-character="" class="line">Those rat bastards. They're rubbing it right in our faces.</p>
-        <p id="p193" data-character="" class="line">Man, Andre'll have a goddamn hemorrhage if we don't get that briefcase back.</p>
-        <p id="p194" data-character="" class="line">They must have been following us for weeks.</p>
-        <p id="p195" data-character="" class="line">Why you say?</p>
-        <p id="p196" data-character="" class="line">"Gas Man." How the hell do they know that I got gas?</p>
-        <p id="p197" data-character="" class="line">They gotta be pros.</p>
-        <p id="p198" data-character="" class="line">Don't worry. We're going to get that money back.</p>
-        <p id="p199" data-character="" class="line">And I'll tell you something else, they ain't never getting to Aspen.</p>
-        <p id="p200" data-character="" class="line">I'm going to see to that.</p>
+        <p id="p192" data-character="mental" class="line">Those rat bastards. They're rubbing it right in our faces.</p>
+        <p id="p193" data-character="shay" class="line">Man, Andre'll have a goddamn hemorrhage if we don't get that briefcase back.</p>
+        <p id="p194" data-character="mental" class="line">They must have been following us for weeks.</p>
+        <p id="p195" data-character="shay" class="line">Why you say?</p>
+        <p id="p196" data-character="mental" class="line">"Gas Man." How the hell do they know that I got gas?</p>
+        <p id="p197" data-character="shay" class="line">They gotta be pros.</p>
+        <p id="p198" data-character="mental" class="line">Don't worry. We're going to get that money back.</p>
+        <p id="p199" data-character="mental" class="line">And I'll tell you something else, they ain't never getting to Aspen.</p>
+        <p id="p200" data-character="mental" class="line">I'm going to see to that.</p>
     </section>
     <section class="scene">
         <img src="img/1542.webp" class="scene-image"/>
         <h2>They said just put it on their tab</h2>
-        <p id="p201" data-character="" class="line">They got The Monkees. They were a major influence on The Beatles.</p>
-        <p id="p202" data-character="" class="line">Yeah, I know.</p>
-        <p id="p203" data-character="" class="line">Excuse me, Flo? Flo, like the TV show.</p>
-        <p id="p204" data-character="" class="line">Uh... what is the "soup du jour"?</p>
+        <p id="p201" data-character="lloyd" class="line">They got The Monkees. They were a major influence on The Beatles.</p>
+        <p id="p202" data-character="harry" class="line">Yeah, I know.</p>
+        <p id="p203" data-character="lloyd" class="line">Excuse me, Flo? Flo, like the TV show.</p>
+        <p id="p204" data-character="lloyd" class="line">Uh... what is the "soup du jour"?</p>
         <p id="p205" data-character="" class="line">It's the soup of the day.</p>
-        <p id="p206" data-character="" class="line">That sounds good. I'll have that.</p>
+        <p id="p206" data-character="lloyd" class="line">That sounds good. I'll have that.</p>
         <p id="p207" data-character="" class="line">Anything else before I leave the area?</p>
-        <p id="p208" data-character="" class="line">Yes yes, my soda's flat. It doesn't have any bubbles.</p>
+        <p id="p208" data-character="harry" class="line">Yes yes, my soda's flat. It doesn't have any bubbles.</p>
         <p id="p209" data-character="" class="line">Happy now?</p>
-        <p id="p210" data-character="" class="line">Feels good to mingle with these laid-back country folk, don't it, Harr? I like it a lot.</p>
-        <p id="p211" data-character="" class="line">Uh-oh.</p>
-        <p id="p212" data-character="" class="line">What? What's the matter?</p>
-        <p id="p213" data-character="" class="line">You spilled the salt, that's what's the matter.</p>
-        <p id="p214" data-character="" class="line">Spilling the salt is very bad luck.</p>
-        <p id="p215" data-character="" class="line">We're driving across the country.</p>
-        <p id="p216" data-character="" class="line">The last thing we need is bad luck.</p>
-        <p id="p217" data-character="" class="line">Quick. Toss some salt over your right shoulder.</p>
-        <p id="p218" data-character="" class="line">Uh-oh, too little too late, Harry.</p>
+        <p id="p210" data-character="lloyd" class="line">Feels good to mingle with these laid-back country folk, don't it, Harr? I like it a lot.</p>
+        <p id="p211" data-character="lloyd" class="line">Uh-oh.</p>
+        <p id="p212" data-character="harry" class="line">What? What's the matter?</p>
+        <p id="p213" data-character="lloyd" class="line">You spilled the salt, that's what's the matter.</p>
+        <p id="p214" data-character="lloyd" class="line">Spilling the salt is very bad luck.</p>
+        <p id="p215" data-character="lloyd" class="line">We're driving across the country.</p>
+        <p id="p216" data-character="lloyd" class="line">The last thing we need is bad luck.</p>
+        <p id="p217" data-character="lloyd" class="line">Quick. Toss some salt over your right shoulder.</p>
+        <p id="p218" data-character="lloyd" class="line">Uh-oh, too little too late, Harry.</p>
         <p id="p219" data-character="" class="line">Who's the dead man that hit me with the salt shaker?</p>
-        <p id="p220" data-character="" class="line">Well... uh... it was a terrible mistake, sir.</p>
-        <p id="p221" data-character="" class="line">Please, believe me. I would never do anything to offend a man of your size.</p>
+        <p id="p220" data-character="harry" class="line">Well... uh... it was a terrible mistake, sir.</p>
+        <p id="p221" data-character="harry" class="line">Please, believe me. I would never do anything to offend a man of your size.</p>
         <p id="p222" data-character="" class="line">Kick his ass, Sea Bass!</p>
         <p id="p223" data-character="" class="line">You gonna eat that?</p>
-        <p id="p224" data-character="" class="line">What? That? No, yes, no. Well... no, it crossed my mind. Yeah.</p>
+        <p id="p224" data-character="harry" class="line">What? That? No, yes, no. Well... no, it crossed my mind. Yeah.</p>
         <p id="p225" data-character="" class="line">Still want it?</p>
-        <p id="p226" data-character="" class="line">Nah, you go ahead.</p>
-        <p id="p227" data-character="" class="line">You really wimped out, man.</p>
-        <p id="p228" data-character="" class="line">What are you talking about, wimped out?</p>
-        <p id="p229" data-character="" class="line">Well-well, did you... The guy hawked on my burger!</p>
-        <p id="p230" data-character="" class="line">Hey, wait a second. I think I just...</p>
-        <p id="p231" data-character="" class="line">Yeah... I just had an idea.</p>
-        <p id="p232" data-character="" class="line">Excuse me. Guys?</p>
+        <p id="p226" data-character="harry" class="line">Nah, you go ahead.</p>
+        <p id="p227" data-character="lloyd" class="line">You really wimped out, man.</p>
+        <p id="p228" data-character="harry" class="line">What are you talking about, wimped out?</p>
+        <p id="p229" data-character="harry" class="line">Well-well, did you... The guy hawked on my burger!</p>
+        <p id="p230" data-character="lloyd" class="line">Hey, wait a second. I think I just...</p>
+        <p id="p231" data-character="lloyd" class="line">Yeah... I just had an idea.</p>
+        <p id="p232" data-character="lloyd" class="line">Excuse me. Guys?</p>
         <p id="p233" data-character="" class="line">What the hell do you want?</p>
-        <p id="p234" data-character="" class="line">Uh... I just want to apologize for that unpleasant scene a little earlier.</p>
-        <p id="p235" data-character="" class="line">My friend Harry and l would like to buy you guys a round of beers. Just to bury the hatchet.</p>
+        <p id="p234" data-character="lloyd" class="line">Uh... I just want to apologize for that unpleasant scene a little earlier.</p>
+        <p id="p235" data-character="lloyd" class="line">My friend Harry and l would like to buy you guys a round of beers. Just to bury the hatchet.</p>
         <p id="p236" data-character="" class="line">Make it four boilermakers.</p>
-        <p id="p237" data-character="" class="line">Whatever you want, sir.</p>
-        <p id="p238" data-character="" class="line">I'll have the waitress bring it over immediately.</p>
-        <p id="p239" data-character="" class="line">Lloyd, what are you doing?</p>
-        <p id="p240" data-character="" class="line">We can't afford to buy them drinks.</p>
-        <p id="p241" data-character="" class="line">Excuse me. Sea Bass and the fellas offered to pick up our check.</p>
-        <p id="p242" data-character="" class="line">They said just put it on their tab. They're very nice.</p>
+        <p id="p237" data-character="lloyd" class="line">Whatever you want, sir.</p>
+        <p id="p238" data-character="lloyd" class="line">I'll have the waitress bring it over immediately.</p>
+        <p id="p239" data-character="harry" class="line">Lloyd, what are you doing?</p>
+        <p id="p240" data-character="harry" class="line">We can't afford to buy them drinks.</p>
+        <p id="p241" data-character="lloyd" class="line">Excuse me. Sea Bass and the fellas offered to pick up our check.</p>
+        <p id="p242" data-character="lloyd" class="line">They said just put it on their tab. They're very nice.</p>
         <p id="p243" data-character="" class="line">Sea Bass said that?</p>
-        <p id="p244" data-character="" class="line">Well, if that guy at the table over there is Sea Bass.</p>
+        <p id="p244" data-character="lloyd" class="line">Well, if that guy at the table over there is Sea Bass.</p>
         <p id="p245" data-character="" class="line">Ah! Uh. All right, if that's what he wants.</p>
-        <p id="p246" data-character="" class="line">Put these on there too, okay?</p>
+        <p id="p246" data-character="harry" class="line">Put these on there too, okay?</p>
         <p id="p247" data-character="" class="line">I'm gonna kill those sons of bitches!</p>
     </section>
     <section class="scene">
         <img src="img/1612.webp" class="scene-image"/>
         <h2>I can't stop going once I've started</h2>
-        <p id="p248" data-character="" class="line">That was genius, Lloyd, sheer genius!</p>
-        <p id="p249" data-character="" class="line">I mean, where did you come up with a scam like that?</p>
-        <p id="p250" data-character="" class="line">Saw it in a movie once.</p>
-        <p id="p251" data-character="" class="line">That was incredible!</p>
-        <p id="p252" data-character="" class="line">So what happened? So the guy tricks some sucker into picking up his tab, then gets away with it scot-free?</p>
-        <p id="p253" data-character="" class="line">No, in the movie, they catch up to him a half-mile down the road and slit his throat. It was a good one!</p>
-        <p id="p254" data-character="" class="line">Wow. Harry?</p>
-        <p id="p255" data-character="" class="line">What?</p>
-        <p id="p256" data-character="" class="line">I know this isn't the best time, but when you get a chance to pull over...</p>
-        <p id="p257" data-character="" class="line">I gotta pee.</p>
-        <p id="p258" data-character="" class="line">What, are you crazy? I'm not pulling over now.</p>
-        <p id="p259" data-character="" class="line">But I gotta go! What am I supposed to do?</p>
-        <p id="p260" data-character="" class="line">Well, whiz in one of the empty beer bottles in the back.</p>
-        <p id="p261" data-character="" class="line">They're on the floor. Just get one of...</p>
-        <p id="p262" data-character="" class="line">Jeez, Lloyd!</p>
-        <p id="p263" data-character="" class="line">Quit moving around!</p>
-        <p id="p264" data-character="" class="line">Watch the seat! Watch the seat!</p>
-        <p id="p265" data-character="" class="line">Okay! All right!</p>
-        <p id="p266" data-character="" class="line">What? What's wrong?</p>
-        <p id="p267" data-character="" class="line">The bottle's almost full and I'm still going.</p>
-        <p id="p268" data-character="" class="line">So stop going.</p>
-        <p id="p269" data-character="" class="line">I can't stop going once I've started. It stings.</p>
-        <p id="p270" data-character="" class="line">Quick! Get me another bottle.</p>
-        <p id="p271" data-character="" class="line">Come on. Hurry hurry hurry !</p>
-        <p id="p272" data-character="" class="line">Okay okay, here here here. Hold it!</p>
-        <p id="p273" data-character="" class="line">Hold that.</p>
-        <p id="p274" data-character="" class="line">Jesus.</p>
-        <p id="p275" data-character="" class="line">Hold that one. Hurry. I'm pinching it.</p>
-        <p id="p276" data-character="" class="line">What are you, a camel?</p>
+        <p id="p248" data-character="harry" class="line">That was genius, Lloyd, sheer genius!</p>
+        <p id="p249" data-character="harry" class="line">I mean, where did you come up with a scam like that?</p>
+        <p id="p250" data-character="lloyd" class="line">Saw it in a movie once.</p>
+        <p id="p251" data-character="harry" class="line">That was incredible!</p>
+        <p id="p252" data-character="harry" class="line">So what happened? So the guy tricks some sucker into picking up his tab, then gets away with it scot-free?</p>
+        <p id="p253" data-character="lloyd" class="line">No, in the movie, they catch up to him a half-mile down the road and slit his throat. It was a good one!</p>
+        <p id="p254" data-character="lloyd" class="line">Wow. Harry?</p>
+        <p id="p255" data-character="harry" class="line">What?</p>
+        <p id="p256" data-character="lloyd" class="line">I know this isn't the best time, but when you get a chance to pull over...</p>
+        <p id="p257" data-character="lloyd" class="line">I gotta pee.</p>
+        <p id="p258" data-character="harry" class="line">What, are you crazy? I'm not pulling over now.</p>
+        <p id="p259" data-character="lloyd" class="line">But I gotta go! What am I supposed to do?</p>
+        <p id="p260" data-character="harry" class="line">Well, whiz in one of the empty beer bottles in the back.</p>
+        <p id="p261" data-character="harry" class="line">They're on the floor. Just get one of...</p>
+        <p id="p262" data-character="harry" class="line">Jeez, Lloyd!</p>
+        <p id="p263" data-character="lloyd" class="line">Quit moving around!</p>
+        <p id="p264" data-character="harry" class="line">Watch the seat! Watch the seat!</p>
+        <p id="p265" data-character="lloyd" class="line">Okay! All right!</p>
+        <p id="p266" data-character="harry" class="line">What? What's wrong?</p>
+        <p id="p267" data-character="lloyd" class="line">The bottle's almost full and I'm still going.</p>
+        <p id="p268" data-character="harry" class="line">So stop going.</p>
+        <p id="p269" data-character="lloyd" class="line">I can't stop going once I've started. It stings.</p>
+        <p id="p270" data-character="lloyd" class="line">Quick! Get me another bottle.</p>
+        <p id="p271" data-character="lloyd" class="line">Come on. Hurry hurry hurry !</p>
+        <p id="p272" data-character="harry" class="line">Okay okay, here here here. Hold it!</p>
+        <p id="p273" data-character="lloyd" class="line">Hold that.</p>
+        <p id="p274" data-character="harry" class="line">Jesus.</p>
+        <p id="p275" data-character="lloyd" class="line">Hold that one. Hurry. I'm pinching it.</p>
+        <p id="p276" data-character="harry" class="line">What are you, a camel?</p>
     </section>
     <section class="scene">
         <img src="img/1769.webp" class="scene-image"/>
         <h2>That's nothing, sir</h2>
-        <p id="p277" data-character="" class="line">Pull over!</p>
-        <p id="p278" data-character="" class="line">Huh?</p>
-        <p id="p279" data-character="" class="line">Pull over!</p>
-        <p id="p280" data-character="" class="line">No, it's a cardigan, but thanks for noticing.</p>
-        <p id="p281" data-character="" class="line">Yeah. Killer boots, man!</p>
-        <p id="p282" data-character="" class="line">Pull your vehicle to the side of the road!</p>
-        <p id="p283" data-character="" class="line">License and registration, please.</p>
-        <p id="p284" data-character="" class="line">You fellas were going a little fast back there, wouldn't you say?</p>
-        <p id="p285" data-character="" class="line">You fellas been doing a bit of boozing, have you?</p>
-        <p id="p286" data-character="" class="line">Sucking back on Grandpa's old cough medicine?</p>
-        <p id="p287" data-character="" class="line">No. Oh no, sir.</p>
-        <p id="p288" data-character="" class="line">Yeah, well, what's that?</p>
-        <p id="p289" data-character="" class="line">That's nothing, sir.</p>
-        <p id="p290" data-character="" class="line">Yeah well, you aware that it's against the law to have an open alcohol container here in the State of Pennsylvania?</p>
-        <p id="p291" data-character="" class="line">Come on, give me that booze, you little pumpkin-pie-haircutted freak!</p>
-        <p id="p292" data-character="" class="line">No, sir, don 't. Don 't drink...</p>
-        <p id="p293" data-character="" class="line">You'd keep your mouth shut if you knew what was good for you, buddy.</p>
-        <p id="p294" data-character="" class="line">Tic Tac, sir?</p>
-        <p id="p295" data-character="" class="line">Get the hell outta here!</p>
+        <p id="p277" data-character="motocop" class="line">Pull over!</p>
+        <p id="p278" data-character="harry" class="line">Huh?</p>
+        <p id="p279" data-character="motocop" class="line">Pull over!</p>
+        <p id="p280" data-character="harry" class="line">No, it's a cardigan, but thanks for noticing.</p>
+        <p id="p281" data-character="lloyd" class="line">Yeah. Killer boots, man!</p>
+        <p id="p282" data-character="motocop" class="line">Pull your vehicle to the side of the road!</p>
+        <p id="p283" data-character="motocop" class="line">License and registration, please.</p>
+        <p id="p284" data-character="motocop" class="line">You fellas were going a little fast back there, wouldn't you say?</p>
+        <p id="p285" data-character="motocop" class="line">You fellas been doing a bit of boozing, have you?</p>
+        <p id="p286" data-character="motocop" class="line">Sucking back on Grandpa's old cough medicine?</p>
+        <p id="p287" data-character="harry" class="line">No. Oh no, sir.</p>
+        <p id="p288" data-character="motocop" class="line">Yeah, well, what's that?</p>
+        <p id="p289" data-character="harry" class="line">That's nothing, sir.</p>
+        <p id="p290" data-character="motocop" class="line">Yeah well, you aware that it's against the law to have an open alcohol container here in the State of Pennsylvania?</p>
+        <p id="p291" data-character="motocop" class="line">Come on, give me that booze, you little pumpkin-pie-haircutted freak!</p>
+        <p id="p292" data-character="lloyd" class="line">No, sir, don 't. Don 't drink...</p>
+        <p id="p293" data-character="motocop" class="line">You'd keep your mouth shut if you knew what was good for you, buddy.</p>
+        <p id="p294" data-character="lloyd" class="line">Tic Tac, sir?</p>
+        <p id="p295" data-character="motocop" class="line">Get the hell outta here!</p>
     </section>
     <section class="scene">
         <img src="img/1816.webp" class="scene-image"/>
         <h2>How could they not have gotten the ransom?</h2>
-        <p id="p296" data-character="" class="line">How could they not have gotten the ransom? It just doesn't make sense.</p>
-        <p id="p297" data-character="" class="line">I left the money exactly where they instructed me to.</p>
-        <p id="p298" data-character="" class="line">Oh, it makes perfect sense, Mary.</p>
-        <p id="p299" data-character="" class="line">We should have called the authorities the minute we knew that Bobby was kidnapped.</p>
-        <p id="p300" data-character="" class="line">Now, Helen, we've been through this already.</p>
+        <p id="p296" data-character="mary" class="line">How could they not have gotten the ransom? It just doesn't make sense.</p>
+        <p id="p297" data-character="mary" class="line">I left the money exactly where they instructed me to.</p>
+        <p id="p298" data-character="helen" class="line">Oh, it makes perfect sense, Mary.</p>
+        <p id="p299" data-character="helen" class="line">We should have called the authorities the minute we knew that Bobby was kidnapped.</p>
+        <p id="p300" data-character="maryfather" class="line">Now, Helen, we've been through this already.</p>
         <p id="p301" data-character="" class="line">Mr. Andre.</p>
-        <p id="p302" data-character="" class="line">Any word yet, sir?</p>
-        <p id="p303" data-character="" class="line">No, nothing yet, Nicholas.</p>
-        <p id="p304" data-character="" class="line">I've been giving this a lot of thought.</p>
-        <p id="p305" data-character="" class="line">Maybe we should cancel the preservation benefit this weekend.</p>
-        <p id="p306" data-character="" class="line">It would be so easy to reschedule it.</p>
-        <p id="p307" data-character="" class="line">No, I don't think we should do anything out of the ordinary.</p>
-        <p id="p308" data-character="" class="line">Yeah, she's right. It's imperative that we carry on as usual... Especially you, Mary.</p>
-        <p id="p309" data-character="" class="line">What am l supposed to do, just go about my life like everything is fine?</p>
-        <p id="p310" data-character="" class="line">That's exactly what you should do.</p>
-        <p id="p311" data-character="" class="line">Yes, go skiing, go to parties, act normally, you know.</p>
-        <p id="p312" data-character="" class="line">Yeah, don't you see, honey?</p>
-        <p id="p313" data-character="" class="line">We can't let on that anything's wrong.</p>
-        <p id="p314" data-character="" class="line">If the press or the authorities get wind of this, the kidnappers may panic.</p>
-        <p id="p315" data-character="" class="line">I mean, you never know what they might do to him then.</p>
+        <p id="p302" data-character="nick" class="line">Any word yet, sir?</p>
+        <p id="p303" data-character="maryfather" class="line">No, nothing yet, Nicholas.</p>
+        <p id="p304" data-character="nick" class="line">I've been giving this a lot of thought.</p>
+        <p id="p305" data-character="nick" class="line">Maybe we should cancel the preservation benefit this weekend.</p>
+        <p id="p306" data-character="nick" class="line">It would be so easy to reschedule it.</p>
+        <p id="p307" data-character="helen" class="line">No, I don't think we should do anything out of the ordinary.</p>
+        <p id="p308" data-character="maryfather" class="line">Yeah, she's right. It's imperative that we carry on as usual... Especially you, Mary.</p>
+        <p id="p309" data-character="mary" class="line">What am l supposed to do, just go about my life like everything is fine?</p>
+        <p id="p310" data-character="maryfather" class="line">That's exactly what you should do.</p>
+        <p id="p311" data-character="helen" class="line">Yes, go skiing, go to parties, act normally, you know.</p>
+        <p id="p312" data-character="maryfather" class="line">Yeah, don't you see, honey?</p>
+        <p id="p313" data-character="maryfather" class="line">We can't let on that anything's wrong.</p>
+        <p id="p314" data-character="maryfather" class="line">If the press or the authorities get wind of this, the kidnappers may panic.</p>
+        <p id="p315" data-character="nick" class="line">I mean, you never know what they might do to him then.</p>
     </section>
     <section class="scene">
         <img src="img/2196.webp" class="scene-image"/>
         <h2>Never did find out who</h2>
-        <p id="p316" data-character="" class="line">Whoa!</p>
+        <p id="p316" data-character="lloyd" class="line">Whoa!</p>
         <p id="p317" data-character="" class="line">You want me to drive?</p>
-        <p id="p318" data-character="" class="line">No, I'm cool.</p>
-        <p id="p319" data-character="" class="line">Yeah! Get her!</p>
-        <p id="p320" data-character="" class="line">This is the life: cold beer, a hot tub and paper-thin walls.</p>
-        <p id="p321" data-character="" class="line">There's only one thing that could make this moment any better.</p>
+        <p id="p318" data-character="lloyd" class="line">No, I'm cool.</p>
+        <p id="p319" data-character="lloyd" class="line">Yeah! Get her!</p>
+        <p id="p320" data-character="lloyd" class="line">This is the life: cold beer, a hot tub and paper-thin walls.</p>
+        <p id="p321" data-character="lloyd" class="line">There's only one thing that could make this moment any better.</p>
         <p id="p322" data-character="" class="line">What's that?</p>
-        <p id="p323" data-character="" class="line">If you had a nice set of knockers.</p>
+        <p id="p323" data-character="lloyd" class="line">If you had a nice set of knockers.</p>
         <p id="p324" data-character="" class="line">That's two things, Lloyd.</p>
-        <p id="p325" data-character="" class="line">Yeah, well, it's a good thing you're not stacked, Harry, or I'd be banging you right now.</p>
-        <p id="p326" data-character="" class="line">I'd show you what a real man can do.</p>
+        <p id="p325" data-character="lloyd" class="line">Yeah, well, it's a good thing you're not stacked, Harry, or I'd be banging you right now.</p>
+        <p id="p326" data-character="lloyd" class="line">I'd show you what a real man can do.</p>
         <p id="p327" data-character="" class="line">Split you like an old piece of firewood.</p>
         <p id="p328" data-character="" class="line">You'd probably like it too, you big homo.</p>
         <p id="p329" data-character="" class="line">Shut up.</p>
