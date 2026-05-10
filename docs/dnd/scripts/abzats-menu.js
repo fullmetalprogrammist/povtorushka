@@ -37,8 +37,14 @@ document.querySelectorAll('p.line').forEach(p => {
         p.classList.add('active');
         currentOpenContainer = buttonContainer;
     };
-    
-    const handleAction = (actionFn) => {
+
+    const hideLineButtons = () => {
+        buttonContainer.style.display = 'none';
+        p.classList.remove('active');
+        if (currentOpenContainer === buttonContainer) currentOpenContainer = null;
+    };
+
+    const handleLineText = (actionFn) => {
         let text = p.cloneNode(true);
         text.querySelectorAll('.line-buttons').forEach(el => el.remove());
         let finalText = text.textContent.trim();
@@ -46,27 +52,26 @@ document.querySelectorAll('p.line').forEach(p => {
         if (selection.toString().trim() && p.contains(selection.anchorNode)) {
             finalText = selection.toString();
         }
+        hideLineButtons();
         actionFn(finalText);
     };
     
     // Копирование в буфер
     p.querySelector('.btn-copy').addEventListener('click', (e) => {
         e.stopPropagation();
-        handleAction((text) => navigator.clipboard.writeText(text));
+        handleLineText((text) => navigator.clipboard.writeText(text));
     });
     
     // Отправка в переводчик
     p.querySelector('.btn-translate').addEventListener('click', (e) => {
         e.stopPropagation();
-        handleAction((text) => window.open(`https://translate.google.com/?sl=en&tl=ru&text=${encodeURIComponent(text)}&op=translate`));
+        handleLineText((text) => window.open(`https://translate.google.com/?sl=en&tl=ru&text=${encodeURIComponent(text)}&op=translate`));
     });
     
     // Закрытие меню
     p.querySelector('.btn-close').addEventListener('click', (e) => {
         e.stopPropagation();
-        buttonContainer.style.display = 'none';
-        p.classList.remove('active');
-        if (currentOpenContainer === buttonContainer) currentOpenContainer = null;
+        hideLineButtons();
     });
     
     p.addEventListener('click', (e) => {
