@@ -47,7 +47,7 @@ function renderFavorites() {
             if (targetP) {
                 targetP.scrollIntoView({ block: 'center' });
                 targetP.classList.add('highlight');
-                setTimeout(() => targetP.classList.remove('highlight'), 2000);
+                setTimeout(() => targetP.classList.remove('highlight'), 3000);
             }
         });
     });

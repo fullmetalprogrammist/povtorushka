@@ -262,6 +262,7 @@ body {
 
 .line.active {
     background: rgba(196, 167, 71, 0.15);
+    box-shadow: 0 0 0 5px rgba(196, 167, 71, 0.15);
     border-radius: 12px;
 }
 .line-buttons {
@@ -346,6 +347,7 @@ body {
     font-size: 24px;
 }
 .highlight {
-    background: #fff3cd;
-    transition: background-color 0.3s;
+    background-color: #ffd966;
+    border-radius: 12px;
+    box-shadow: 0 0 0 4px #ffd966;
 }

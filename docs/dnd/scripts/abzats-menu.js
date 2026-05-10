@@ -96,6 +96,8 @@ function initLine(p) {
         hideLineButtons();
     });
     
+
+    // Чтобы на мобилах не появлялось дефолтное меню "Копировать, Выбрать все" и т.д.
     p.addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
         showButtons();
