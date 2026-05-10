@@ -14,14 +14,17 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0 });
 
-document.querySelectorAll('p.line').forEach(p => {
-    observer.observe(p);
+document.querySelectorAll('p.line').forEach(initLine);
+
+function initLine(p) {
+  observer.observe(p);
     
     const buttonContainer = document.createElement('div');
     buttonContainer.className = 'line-buttons';
     buttonContainer.innerHTML = `
         <button class="btn-copy"><span class="material-icons">content_copy</span></button>
         <button class="btn-translate"><span class="material-icons">translate</span></button>
+        <button class="btn-favorites"><span class="material-icons">bookmark</span></button>
         <button class="btn-close"><span class="material-icons">close</span></button>
     `;
     p.appendChild(buttonContainer);
@@ -68,6 +71,25 @@ document.querySelectorAll('p.line').forEach(p => {
         handleLineText((text) => window.open(`https://translate.google.com/?sl=en&tl=ru&text=${encodeURIComponent(text)}&op=translate`));
     });
     
+    // Добавление в избранное
+    p.querySelector('.btn-favorites').addEventListener('click', (e) => {
+        e.stopPropagation();
+        handleLineText((text) => {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            const id = p.id;
+            const exists = favorites.some(fav => fav.id === id);
+            if (!exists) {
+                favorites.unshift({
+                    id: id,
+                    text: text,
+                    timestamp: Date.now(),
+                });
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                renderFavorites();
+            }
+        });
+    });
+
     // Закрытие меню
     p.querySelector('.btn-close').addEventListener('click', (e) => {
         e.stopPropagation();
@@ -83,4 +105,4 @@ document.querySelectorAll('p.line').forEach(p => {
         e.preventDefault();
         showButtons();
     });
-});
+}

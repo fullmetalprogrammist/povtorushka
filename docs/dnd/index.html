@@ -6,10 +6,9 @@
     <title>Dumb and Dumber</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./scripts/render-favorites.js" defer></script>
     <script src="./scripts/menu-creator.js" defer></script>
     <script src="./scripts/menu-mobile.js" defer></script>
-    <script src="./scripts/highlight-vocabular-select.js" defer></script>
-    <script src="./scripts/copy-line-text.js" defer></script>
     <script src="./scripts/send-to-translate.js" defer></script>
     <script src="./scripts/abzats-menu.js" defer></script>
 </head>
@@ -1292,12 +1291,18 @@
         <p id="p1052" class="line">No erasies, none at all. You can't triple-stamp.</p>
         <p id="p1053" class="line">Yes, if you have a double-stamp, of course you can.</p>
     </section>
+    <section id="favorites">
+        <h2>Favorites</h2>
+    </section>
     <div class="bottom-panel">
         <a href="../index.html" class="panel-button home" aria-label="На главную">
             <span class="material-icons">home</span>
         </a>
-        <a href="#pagestart" class="panel-button pagestart" aria-label="Словарь">
+        <a href="#pagestart" class="panel-button pagestart" aria-label="В начало">
             <span class="material-icons">arrow_upward</span>
+        </a>
+        <a href="#favorites" class="panel-button favorites" aria-label="Избранное">
+            <span class="material-icons">bookmark</span>
         </a>
         <button class="panel-button chapters-menu" aria-label="Меню">
             <span class="material-icons">menu</span>
