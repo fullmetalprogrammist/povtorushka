@@ -71,6 +71,7 @@ h2 {
     font-size: 18px;
     margin-bottom: 18px;
     text-align: justify;
+    position: relative;
 }
 
 .line:first-of-type {
@@ -259,9 +260,6 @@ body {
 /* ======================================================================= */
 /* ======================================================================= */
 
-.line {
-    position: relative;
-}
 .line.active {
     background: rgba(196, 167, 71, 0.15);
     border-radius: 12px;

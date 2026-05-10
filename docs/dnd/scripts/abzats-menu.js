@@ -1,7 +1,21 @@
 let currentOpenContainer = null;
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            const p = entry.target;
+            const buttonContainer = p.querySelector('.line-buttons');
+            if (buttonContainer && buttonContainer.style.display === 'flex') {
+                buttonContainer.style.display = 'none';
+                p.classList.remove('active');
+                if (currentOpenContainer === buttonContainer) currentOpenContainer = null;
+            }
+        }
+    });
+}, { threshold: 0 });
+
 document.querySelectorAll('p.line').forEach(p => {
-    p.style.position = 'relative';
+    observer.observe(p);
     
     const buttonContainer = document.createElement('div');
     buttonContainer.className = 'line-buttons';
