@@ -262,10 +262,14 @@ body {
 .line {
     position: relative;
 }
+.line.active {
+    background: rgba(196, 167, 71, 0.15);
+    border-radius: 12px;
+}
 .line-buttons {
     position: absolute;
-    bottom: 4px;
-    right: 8px;
+    bottom: -40px;
+    right: 0;
     display: none;
     gap: 8px;
     z-index: 10;

@@ -15,8 +15,12 @@ document.querySelectorAll('p.line').forEach(p => {
     const showButtons = () => {
         if (currentOpenContainer && currentOpenContainer !== buttonContainer) {
             currentOpenContainer.style.display = 'none';
+            if (currentOpenContainer.parentElement) {
+                currentOpenContainer.parentElement.classList.remove('active');
+            }
         }
         buttonContainer.style.display = 'flex';
+        p.classList.add('active');
         currentOpenContainer = buttonContainer;
     };
     
@@ -47,6 +51,7 @@ document.querySelectorAll('p.line').forEach(p => {
     p.querySelector('.btn-close').addEventListener('click', (e) => {
         e.stopPropagation();
         buttonContainer.style.display = 'none';
+        p.classList.remove('active');
         if (currentOpenContainer === buttonContainer) currentOpenContainer = null;
     });
     
