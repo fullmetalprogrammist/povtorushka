@@ -172,7 +172,6 @@ body {
 /* ======================================================================= */
 /* ======================================================================= */
 
-
 .bottom-panel {
     position: fixed;
     bottom: 0;
@@ -246,4 +245,49 @@ body {
     .table-of-contents.mobile-visible::-webkit-scrollbar {
         display: none;
     }
+}
+
+
+
+
+
+/* ======================================================================= */
+/* ======================================================================= */
+/* ======================================================================= */
+/*                          Меню кнопок абзаца                             */
+/* ======================================================================= */
+/* ======================================================================= */
+/* ======================================================================= */
+
+.line {
+    position: relative;
+}
+.line-buttons {
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
+    display: none;
+    gap: 8px;
+    z-index: 10;
+}
+.line-buttons button {
+    width: 36px;
+    height: 36px;
+    background: #c4a747;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+.line-buttons button:hover {
+    background: #a88a3a;
+    transform: scale(1.05);
+}
+.line-buttons .material-icons {
+    font-size: 20px;
 }
