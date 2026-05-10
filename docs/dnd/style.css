@@ -291,3 +291,9 @@ body {
 .line-buttons .material-icons {
     font-size: 20px;
 }
+.line-buttons .btn-close {
+    background: #dc3545;
+}
+.line-buttons .btn-close:hover {
+    background: #bb2d3b;
+}
