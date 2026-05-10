@@ -27,7 +27,11 @@ function renderFavorites() {
         
         const dateSpan = document.createElement('div');
         dateSpan.className = 'favorite-date';
-        dateSpan.textContent = new Date(fav.timestamp).toLocaleString();
+        dateSpan.textContent = new Date(fav.timestamp).toLocaleDateString('en-GB', { 
+            day: 'numeric', 
+            month: 'short', 
+            year: 'numeric' 
+        });
         
         contentDiv.appendChild(textP);
         contentDiv.appendChild(dateSpan);
