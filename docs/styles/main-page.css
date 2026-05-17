@@ -1,0 +1,84 @@
+
+
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.movie-title, .movie-year {
+    font-family: "Georgia", "Times New Roman", "Palatino", "Book Antiqua", serif;
+}
+
+.movie-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+}
+
+.movie-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2/3;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.movie-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px;
+    text-align: center;
+}
+
+.movie-title {
+    color: #ffffff;
+    font-size: 1rem;
+    margin: 0 0 4px;
+    font-weight: 600;
+}
+
+.movie-year {
+    color: #cccccc;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 12px;
+        padding: 12px;
+    }
+    .movie-poster {
+        aspect-ratio: 1/1;
+    }
+    .movie-title {
+        font-size: 0.75rem;
+    }
+}
+
+
+
+
+
+
+.movie-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
