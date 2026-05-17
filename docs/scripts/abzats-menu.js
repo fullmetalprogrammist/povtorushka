@@ -75,11 +75,17 @@ function initLine(p) {
     p.querySelector('.btn-favorites').addEventListener('click', (e) => {
         e.stopPropagation();
         handleLineText((text) => {
-            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || {};
+            const pageId = document.body.id;
             const id = p.id;
-            const exists = favorites.some(fav => fav.id === id);
+            
+            if (!favorites[pageId]) {
+                favorites[pageId] = [];
+            }
+            
+            const exists = favorites[pageId].some(fav => fav.id === id);
             if (!exists) {
-                favorites.unshift({
+                favorites[pageId].unshift({
                     id: id,
                     text: text,
                     timestamp: Date.now(),

@@ -2,7 +2,9 @@ function renderFavorites() {
     const section = document.getElementById('favorites');
     if (!section) return;
     
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const favoritesAll = JSON.parse(localStorage.getItem('favorites')) || [];
+    const pageId = document.body.id;
+    const favorites = favoritesAll[pageId] || [];
     
     section.querySelectorAll('.favorite-item, .favorite-empty').forEach(el => el.remove());
     
@@ -58,10 +60,14 @@ function renderFavorites() {
     
     section.querySelectorAll('.favorite-remove').forEach(btn => {
         btn.addEventListener('click', () => {
-            let favs = JSON.parse(localStorage.getItem('favorites')) || [];
-            favs.splice(btn.dataset.index, 1);
-            localStorage.setItem('favorites', JSON.stringify(favs));
-            renderFavorites();
+            let favs = JSON.parse(localStorage.getItem('favorites')) || {};
+            const pageId = document.body.id;
+            if (favs[pageId]) {
+                favs[pageId].splice(btn.dataset.index, 1);
+                if (favs[pageId].length === 0) delete favs[pageId];
+                localStorage.setItem('favorites', JSON.stringify(favs));
+                renderFavorites();
+            }
         });
     });
 }
