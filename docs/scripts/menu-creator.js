@@ -30,6 +30,7 @@
         const link = document.createElement('a');
         link.href = `#${sceneId}`;
         link.textContent = `${index + 1}. ${titleText}`;
+        // link.textContent = titleText;
 
         link.addEventListener('click', (e) => {
             e.preventDefault();
