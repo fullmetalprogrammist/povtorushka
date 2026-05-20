@@ -30,7 +30,6 @@
         const link = document.createElement('a');
         link.href = `#${sceneId}`;
         link.textContent = `${index + 1}. ${titleText}`;
-        // link.textContent = titleText;
 
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -45,6 +44,26 @@
         tocList.appendChild(listItem);
     });
 
+    function scrollTocToActiveLink() {
+        const activeLink = document.querySelector('.toc-list a.active');
+        if (!activeLink) return;
+        
+        const tocContainer = document.querySelector('.table-of-contents');
+        if (!tocContainer) return;
+        
+        const containerRect = tocContainer.getBoundingClientRect();
+        const linkRect = activeLink.getBoundingClientRect();
+        
+        // Проверяем, виден ли активный пункт в меню
+        const isVisible = linkRect.top >= containerRect.top && linkRect.bottom <= containerRect.bottom;
+        
+        // Если пункт не виден, прокручиваем меню так, чтобы он оказался наверху
+        if (!isVisible) {
+            const scrollTo = tocContainer.scrollTop + (linkRect.top - containerRect.top) - 20;
+            tocContainer.scrollTop = scrollTo;
+        }
+    }
+
     const observerOptions = { threshold: 0.3 };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -55,6 +74,7 @@
                 const activeLink = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
                 if (activeLink) {
                     activeLink.classList.add('active');
+                    scrollTocToActiveLink();
                 }
             }
         });
