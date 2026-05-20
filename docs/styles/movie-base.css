@@ -47,7 +47,7 @@ h1::after {
 .scene-image {
     display: block;
     width: 100%;
-    max-width: 580px;
+    max-width: 680px;
     height: auto;
     border-radius: 12px;
     margin-bottom: 24px;
